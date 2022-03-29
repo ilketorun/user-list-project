@@ -1,7 +1,13 @@
-# Getting Started with Create React App
+# User List Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary
 
+This project is has 2 main components
+
+1. Form Component
+2. List Component
+
+<!--
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## -->
