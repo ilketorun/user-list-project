@@ -3,8 +3,8 @@ import styles from "./UserForm.module.css";
 import Button from "../../UI/Button/Button";
 
 const UserForm = (props) => {
-  const [username, setUsername] = useState();
-  const [age, setAge] = useState();
+  const [usernameState, setUsernameState] = useState("");
+  const [ageState, setAgeState] = useState("");
 
   const userData = {
     username: "dummyname",
@@ -13,16 +13,16 @@ const UserForm = (props) => {
   };
 
   const usernameChangeHandler = (event) => {
-    setUsername(event.target.value);
+    setUsernameState(event.target.value);
   };
 
   const ageChangeHandler = (event) => {
-    setAge(event.target.value);
+    setAgeState(event.target.value);
   };
 
   const submitHandler = (event) => {
-    userData.username = username;
-    userData.age = age;
+    userData.username = usernameState;
+    userData.age = ageState;
     userData.id = Math.random();
 
     props.submited(userData);

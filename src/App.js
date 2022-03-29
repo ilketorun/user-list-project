@@ -5,14 +5,14 @@ import UserList from "./components/Users/UserList/UserList";
 
 const INITIAL_USERS = [
   {
-    id: "Ahmet12",
-    username: "Ahmet",
-    age: 12,
+    id: "Masego(Micah Davis)28",
+    username: "Masego(Micah Davis)",
+    age: 28,
   },
   {
-    id: "Mehmet42",
-    username: "Mehmet",
-    age: 42,
+    id: "Elley Duhe30",
+    username: "Elley Duhé",
+    age: 30,
   },
 ];
 
@@ -20,13 +20,22 @@ function App() {
   const [users, setUsers] = useState(INITIAL_USERS);
 
   const newUserHandler = (userData) => {
-    setUsers(userData);
+    const newUserArray = [
+      ...users,
+      {
+        id: userData.id,
+        username: userData.username,
+        age: userData.age,
+      },
+    ];
+
+    setUsers(newUserArray);
   };
 
   return (
     <div>
       <UserInput newUser={newUserHandler} />
-      <UserList users={users} />
+      <UserList userListItems={users} />
     </div>
   );
 }
