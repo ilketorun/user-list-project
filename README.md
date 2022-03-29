@@ -2,10 +2,11 @@
 
 ### `Summary`
 
-This project is has 2 main components
+### This project is has 2 main components
 
-1. Form Component
-2. List Component
+#### 1. Form Component
+
+#### 2. List Component
 
 <!--
 ## Available Scripts
