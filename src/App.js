@@ -1,6 +1,5 @@
 import { useState } from "react";
-import "./App.css";
-import UserInput from "./components/Users/UserInput/UserInput";
+import UserForm from "./components/Users/UserInput/UserForm";
 import UserList from "./components/Users/UserList/UserList";
 
 const INITIAL_USERS = [
@@ -20,6 +19,7 @@ function App() {
   const [users, setUsers] = useState(INITIAL_USERS);
 
   const newUserHandler = (userData) => {
+    console.log(userData);
     const newUserArray = [
       ...users,
       {
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <UserInput newUser={newUserHandler} />
+      <UserForm addUser={newUserHandler} />
       <UserList userListItems={users} />
     </div>
   );

@@ -4,8 +4,9 @@ const UserItems = (props) => {
   return (
     <div>
       <ul>
-        <div className={styles.UserItems}>
-          {props.username} {props.age}
+        <div className={styles.userItems}>
+          <div>{props.username}</div>
+          <div>{props.age}</div>
         </div>
       </ul>
     </div>

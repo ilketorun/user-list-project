@@ -1,6 +1,10 @@
 .userItems {
-  display: flex;
-  background-color: aquamarine;
-  padding: 2rem;
-  border-radius: 5px;
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0.1rem;
+  width: 90%;
+  max-width: 40rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
 }
