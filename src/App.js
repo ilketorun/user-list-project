@@ -16,26 +16,25 @@ const INITIAL_USERS = [
 ];
 
 function App() {
-  const [users, setUsers] = useState(INITIAL_USERS);
+  const [userList, setUserList] = useState(INITIAL_USERS);
 
-  const newUserHandler = (userData) => {
-    console.log(userData);
-    const newUserArray = [
-      ...users,
-      {
-        id: userData.id,
-        username: userData.username,
-        age: userData.age,
-      },
-    ];
-
-    setUsers(newUserArray);
+  const addUserHandler = (username, age) => {
+    setUserList((prevUserList) => {
+      return [
+        ...prevUserList,
+        {
+          id: Math.random().toString(),
+          username: username,
+          age: age,
+        },
+      ];
+    });
   };
 
   return (
     <div>
-      <UserForm addUser={newUserHandler} />
-      <UserList userListItems={users} />
+      <UserForm onAddUser={addUserHandler} />
+      <UserList users={userList} />
     </div>
   );
 }

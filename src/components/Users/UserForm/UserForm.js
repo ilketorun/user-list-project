@@ -7,12 +7,6 @@ const UserForm = (props) => {
   const [enteredUserName, setenteredUserName] = useState("");
   const [enteredAge, setenteredAge] = useState("");
 
-  const userData = {
-    username: "dummyname",
-    age: 1,
-    id: "id",
-  };
-
   const usernameChangeHandler = (event) => {
     setenteredUserName(event.target.value);
   };
@@ -29,11 +23,7 @@ const UserForm = (props) => {
       return;
     }
 
-    userData.username = enteredUserName;
-    userData.age = enteredAge;
-    userData.id = Math.random();
-
-    props.addUser(userData);
+    props.onAddUser(enteredUserName, enteredAge);
     setenteredUserName("");
     setenteredAge("");
 
