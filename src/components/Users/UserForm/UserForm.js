@@ -1,10 +1,15 @@
-import { useState } from "react";
+import React, { useState, Fragment } from "react";
+// import { useRef } from "react";
 import styles from "./UserForm.module.css";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
 import ErrorModel from "../../UI/ErrorModal/ErrorModel";
 
 const UserForm = (props) => {
+  // These are Ref hooks
+  // const nameInputRef = useRef();
+  // const ageInputRef = useRef();
+
   const [enteredUserName, setenteredUserName] = useState("");
   const [enteredAge, setenteredAge] = useState("");
   const [error, setError] = useState();
@@ -19,6 +24,11 @@ const UserForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    // Refs can be used to get the final value of a field
+    // if we want to reset the field we have to play with the actual DOM,
+    // so it is a unwanted case since we want React to do that for us
+    // console.log(nameInputRef);
+    // console.log("nameInputRef: " + nameInputRef.current.value);
     if (enteredUserName.trim().length === 0 || enteredAge.trim().length === 0) {
       setError({
         title: "Invalid username",
@@ -44,7 +54,7 @@ const UserForm = (props) => {
   };
 
   return (
-    <div>
+    <Fragment>
       {error && (
         <ErrorModel
           title={error.title}
@@ -61,6 +71,7 @@ const UserForm = (props) => {
             type="text"
             placeholder="Type your username"
             onChange={usernameChangeHandler}
+            // ref={nameInputRef}
           ></input>
           <label htmlFor="age">Age (Years)</label>
           <input
@@ -70,11 +81,12 @@ const UserForm = (props) => {
             placeholder="Type your age"
             step="1"
             onChange={ageChangeHandler}
+            // ref={ageInputRef}
           ></input>
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 
