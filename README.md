@@ -2,10 +2,29 @@
 
 ### `Summary`
 
-This project is has 2 main components
+This project is has 3 main components which are Helper, UI and Users.
 
-1. Form Component
-2. List Component
+1. Helpers
+   a. Wrapper
+2. UI
+   a. Button
+   b. Card
+   c. ErrorModal
+3. Users
+   a. Form Component
+   b. List Component
+
+#### Helpers
+
+In helpers a `Wrapper` is provided which does the same thing with `<></>` or `React.Fragment`.
+
+#### UI
+
+In UI a `Button` is provided with type, className and onClick props so that it can be used instead of built-in button. A `Card` is provided which can be used to have a white rectangle with softaned edges and a little shadow. Lastly, an `ErrorModal` is provided and used a portal to have it as direct child of the html body.
+
+#### Users
+
+In Users, a `UserForm` is provided where useState, useEffect form and its friends input, label and button properties are utilized. States are handled. Also, a `UserList` is provided where array functions are utilized.
 
 <!--
 ## Available Scripts
