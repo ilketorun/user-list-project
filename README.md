@@ -6,18 +6,18 @@ This project is has 3 main components which are Helper, UI and Users.
 
 1. Helpers
 
-- Wrapper
+   - Wrapper
 
 2. UI
 
-- Button
-- Card
-- ErrorModal
+   - Button
+   - Card
+   - ErrorModal
 
 3. Users
 
-- Form Component
-- List Component
+   - Form Component
+   - List Component
 
 ### `Helpers`
 
